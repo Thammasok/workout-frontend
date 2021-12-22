@@ -1,3 +1,38 @@
 {
-  "extends": "next/core-web-vitals"
+	"env": {
+		"browser": true,
+		"es2021": true,
+		"node": true
+	},
+	"extends": [
+		"plugin:react/recommended",
+		"react-app",
+		"airbnb",
+		"airbnb-typescript",
+		"prettier/@typescript-eslint",
+		"plugin:prettier/recommended"
+	],
+	"plugins": [
+		// "react",
+		// "@typescript-eslint",
+		"import",
+		"jest-dom"
+	],
+	"settings": {
+		"import/parsers": {
+			"@typescript-eslint/parser": [".ts", ".tsx"]
+		},
+		"import/resolver": {
+			"typescript": {}
+		}
+	},
+	"rules": {
+		"react/prop-types": "off",
+		"react/jsx-indent": [2, 2, { "checkAttributes": false }],
+		"react/jsx-indent-props": [2, 2],
+		"import/prefer-default-export": "off",
+		"import/no-cycle": "off",
+		"no-multi-assign": "off",
+		"jest/no-large-snapshots": ["error", { "maxSize": 30 }]
+	}
 }
